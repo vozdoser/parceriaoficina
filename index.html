@@ -196,6 +196,32 @@ p,.apoio{text-align:justify;text-justify:inter-word;
             letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--cinza);}
 .faixa .d{font-family:'Fraunces',Georgia,serif;font-size:clamp(18px,4.4vw,20px);color:var(--tiffany);}
 
+/* ---------- tabelinha resumo ---------- */
+.resumo{display:flex;flex-direction:column;gap:1px;background:rgba(25,60,58,.16);margin-top:clamp(28px,5vw,42px);}
+.resumo .cab{display:none;}
+@media(min-width:960px){
+  .resumo .cab{display:grid;grid-template-columns:1.9fr 1fr 1.1fr 1.5fr 1.3fr;background:var(--dark);}
+  .resumo .cab div{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+                   font-weight:700;color:#fff;padding:14px 18px;}
+  .lr{display:grid;grid-template-columns:1.9fr 1fr 1.1fr 1.5fr 1.3fr;align-items:center;}
+  .lr>div{padding:16px 18px;}
+  .lr .rot{display:none;}
+}
+.lr{background:var(--paper);color:var(--ink);padding:clamp(18px,4vw,0);}
+@media(max-width:959px){.lr{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;}
+  .lr .rot{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+           font-weight:700;color:var(--cinza);align-self:center;}
+  .lr .f{grid-column:1 / -1;font-family:'Fraunces',Georgia,serif;font-size:21px;color:var(--dark);margin-bottom:4px;}
+}
+.lr .f{font-family:'Fraunces',Georgia,serif;font-size:clamp(18px,4.4vw,20px);color:var(--dark);line-height:1.18;}
+.lr .s{font-size:clamp(14.5px,3.8vw,15.5px);line-height:1.45;}
+.lr .o{font-size:clamp(15px,3.9vw,16px);}
+.lr .o s{opacity:.5;}
+.lr .d{font-family:'Fraunces',Georgia,serif;font-size:clamp(16px,4vw,18px);color:var(--tiffany);}
+.lr .v{font-family:'Fraunces',Georgia,serif;font-size:clamp(19px,4.6vw,22px);color:var(--dark);line-height:1.2;}
+.lr .v u{display:block;text-decoration:none;font-family:'Karla',Arial,sans-serif;font-size:clamp(12.5px,3.2vw,13px);
+         color:var(--cinza);margin-top:3px;}
+
 /* ---------- números ---------- */
 .nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(225,244,242,.25);
       margin-top:clamp(30px,6vw,44px);}
@@ -310,79 +336,6 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   </div>
 </section>
 
-<!-- ======================= AS QUATRO FRENTES ======================= -->
-<section id="valores" style="background:#fff;">
-  <div class="wrap">
-    <div class="olho rev">As condições</div>
-    <h2 class="rev">As quatro frentes e <em>seus valores</em></h2>
-    <div class="frentes">
-
-      <div class="frente rev">
-        <div class="nome">Workshop Voz do Ser</div>
-        <div class="quem">Contratado pela pessoa</div>
-        <div class="oque">Imersão de dois dias na metodologia Comunicação com Propósito, sábado e domingo, das 9h às 21h.</div>
-        <div class="vals">
-          <div class="lin"><b>Valor integral</b><span class="v"><s>R$ 1.250,00</s></span></div>
-          <div class="lin"><b>Desconto</b><span class="v off">50%*</span></div>
-          <div class="final">
-            <div class="rot">Valor final</div>
-            <div class="big">R$ 625,00</div>
-            <div class="obs">* Condição de Black Friday, na edição de 28 e 29 de novembro de 2026. Nas demais edições, o desconto da parceria é de 30%: R$&nbsp;875,00.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="frente rev">
-        <div class="nome">Formação Comunicação com Propósito</div>
-        <div class="quem">Contratada pela pessoa</div>
-        <div class="oque">Estudo da mentalidade humana, com aulas semanais e acompanhamento individualizado. Primeiro passo da trilha do Terapeuta da Comunicação.</div>
-        <div class="vals">
-          <div class="lin"><b>Valor integral</b><span class="v"><s>R$ 710,00</s></span></div>
-          <div class="lin"><b>Desconto</b><span class="v off">10%</span></div>
-          <div class="final">
-            <div class="rot">Valor final</div>
-            <div class="big">R$ 639,00</div>
-            <div class="obs">por mês</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="frente rev">
-        <div class="nome">Trilhas de Autoconhecimento e Autocuidado</div>
-        <div class="quem">Contratadas pela pessoa</div>
-        <div class="oque">Duas trilhas independentes, 15 aulas de cerca de 20&nbsp;minutos cada, 100% online, com quiz e certificado digital.</div>
-        <div class="vals">
-          <div class="lin"><b>Valor integral</b><span class="v"><s>R$ 197,00</s></span></div>
-          <div class="lin"><b>Desconto</b><span class="v off">50%</span></div>
-          <div class="final">
-            <div class="rot">Valor final</div>
-            <div class="big">R$ 98,50</div>
-            <div class="obs">por trilha</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="frente inv rev">
-        <div class="nome">Pacote de Terapia da Comunicação</div>
-        <div class="quem">Contratado pela empresa</div>
-        <div class="oque">Sessões individuais para o time da Oficina, com a gestão dos agendamentos por nossa conta, como um plano de benefícios.</div>
-        <div class="vals">
-          <div class="lin"><b>Valor integral</b><span class="v">inicia em <s>R$ 557,00</s></span></div>
-          <div class="lin"><b>Desconto</b><span class="v off">26% a 42%</span></div>
-          <div class="final">
-            <div class="rot">Valor final</div>
-            <div class="pre">inicia em</div>
-            <div class="big">R$ 410,00</div>
-            <div class="obs">podendo chegar a R$&nbsp;320,00 por sessão, conforme o volume do mês</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <p class="nota rev">* A condição de Black Friday vale para a edição do Workshop de 28 e 29 de novembro de 2026. As demais condições desta proposta não têm prazo.</p>
-  </div>
-</section>
-
 <!-- ======================= FRENTE 1 · WORKSHOP ======================= -->
 <section>
   <div class="wrap">
@@ -438,17 +391,18 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   <div class="wrap">
     <div class="olho rev">Frente 2 · Para cada pessoa</div>
     <h2 class="rev">Formação <em>Comunicação com Propósito</em></h2>
-    <p class="lead rev larg">Um ano de extensivo, com aulas semanais e acompanhamento individualizado.</p>
+    <p class="lead rev larg">Um ano do extensivo Comunicação com Propósito, com aulas semanais e acompanhamento individualizado.</p>
+    <p class="apoio rev destaque" style="margin-top:clamp(22px,4vw,30px);">O extensivo Comunicação com Propósito é o próximo passo de quem fez o Workshop Voz do Ser e quer se aprofundar na metodologia, seguir treinando a própria mente e sustentar o que começou no fim de semana.</p>
     <div class="cards duo">
       <div class="card rev" style="background:var(--mist);">
         <div class="num">Primeiro ano</div>
-        <h3>Um ano de extensivo</h3>
-        <p>Estudo aprofundado da mentalidade humana, com foco em crenças basais, visão de mundo e a integração entre ciência e espiritualidade. Ao longo de um ano, a pessoa aprende a identificar e reverter crenças, rever sua mentalidade e transcender as barreiras que impedem uma comunicação efetiva.</p>
+        <h3>Um ano do extensivo Comunicação com Propósito</h3>
+        <p>Estudo aprofundado da mentalidade humana, com foco em crenças basais, visão de mundo e a integração entre ciência e espiritualidade. Ao longo de um ano, aprende-se a identificar e reverter crenças, rever a própria mentalidade e transcender as barreiras que impedem uma comunicação efetiva.</p>
       </div>
       <div class="card inv rev">
-        <div class="num">Depois, se a pessoa quiser</div>
+        <div class="num">Depois, para quem quer aprofundar</div>
         <h3>Mais um ano e meio até a certificação</h3>
-        <p>Concluído o extensivo, quem desejar seguir no processo cursa mais um ano e meio e recebe a certificação de Terapeuta da Comunicação, emitida pelo Voz do Ser, com a metodologia registrada em cartório, e pela Associação Brasileira dos Terapeutas Holísticos. Quem não seguir permanece em contato com a metodologia pelas sessões de Terapia da Comunicação.</p>
+        <p>Concluído o extensivo Comunicação com Propósito, quem desejar seguir no processo cursa mais um ano e meio e recebe a certificação de Terapeuta da Comunicação, emitida pelo Voz do Ser, com a metodologia registrada em cartório, e pela Associação Brasileira dos Terapeutas Holísticos. Quem não seguir permanece em contato com a metodologia pelas sessões de Terapia da Comunicação.</p>
       </div>
     </div>
     <div class="cards duo" style="margin-top:clamp(18px,3.4vw,24px);">
@@ -560,6 +514,44 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   </div>
 </section>
 
+<!-- ======================= RESUMO DAS CONDIÇÕES ======================= -->
+<section class="esc">
+  <div class="wrap">
+    <div class="olho rev">Resumo</div>
+    <h2 class="rev">As quatro frentes e <em>suas condições</em></h2>
+    <p class="rev larg" style="color:var(--mist);">Tudo o que foi descrito acima, em uma única vista.</p>
+    <div class="resumo rev">
+      <div class="cab"><div>Frente</div><div>Quem contrata</div><div>Valor integral</div><div>Condição</div><div>Valor final</div></div>
+
+      <div class="lr"><div class="f">Workshop Voz do Ser</div>
+        <div class="rot">Quem contrata</div><div class="s">A pessoa</div>
+        <div class="rot">Valor integral</div><div class="o"><s>R$ 1.250,00</s></div>
+        <div class="rot">Condição</div><div class="d">50%*<span class="s" style="display:block;color:var(--cinza);">30% nas demais edições</span></div>
+        <div class="rot">Valor final</div><div class="v">R$ 625,00<u>R$ 875,00 nas demais edições</u></div></div>
+
+      <div class="lr"><div class="f">Formação Comunicação com Propósito</div>
+        <div class="rot">Quem contrata</div><div class="s">A pessoa</div>
+        <div class="rot">Valor integral</div><div class="o"><s>R$ 710,00</s></div>
+        <div class="rot">Condição</div><div class="d">10%</div>
+        <div class="rot">Valor final</div><div class="v">R$ 639,00<u>por mês</u></div></div>
+
+      <div class="lr"><div class="f">Trilhas de Autoconhecimento e Autocuidado</div>
+        <div class="rot">Quem contrata</div><div class="s">A pessoa</div>
+        <div class="rot">Valor integral</div><div class="o"><s>R$ 197,00</s></div>
+        <div class="rot">Condição</div><div class="d">50%</div>
+        <div class="rot">Valor final</div><div class="v">R$ 98,50<u>por trilha</u></div></div>
+
+      <div class="lr"><div class="f">Pacote de Terapia da Comunicação</div>
+        <div class="rot">Quem contrata</div><div class="s">A Oficina</div>
+        <div class="rot">Valor integral</div><div class="o">inicia em <s>R$ 557,00</s></div>
+        <div class="rot">Condição</div><div class="d">26% a 42%</div>
+        <div class="rot">Valor final</div><div class="v">R$ 410,00<u>inicia em · por sessão, conforme o volume do mês</u></div></div>
+
+    </div>
+    <p class="nota rev" style="color:var(--mist);">* A condição de Black Friday vale para a edição do Workshop de 28 e 29 de novembro de 2026. As demais condições desta proposta não têm prazo.</p>
+  </div>
+</section>
+
 <!-- ======================= COMO CONTRATAR ======================= -->
 <section>
   <div class="wrap">
@@ -568,7 +560,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
     <div class="cards duo">
       <div class="card rev" style="background:var(--mist);">
         <div class="num">Pela pessoa</div>
-        <h3>Cada pessoa contrata a sua</h3>
+        <h3>A pessoa contrata o Voz do Ser</h3>
         <p>O Workshop Voz do Ser, a Formação Comunicação com Propósito e as trilhas são contratados individualmente, por cada pessoa do time da Oficina, com as condições desta parceria aplicadas na inscrição.</p>
         <ul class="itens sep">
           <li>Workshop Voz do Ser</li>
@@ -578,7 +570,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
       </div>
       <div class="card inv rev">
         <div class="num">Pela empresa</div>
-        <h3>A Oficina contrata para o time</h3>
+        <h3>A Oficina oferece para o seu time</h3>
         <p>O pacote de Terapia da Comunicação é contratado pela empresa, como um plano de benefícios. A Oficina paga pela quantidade de terapias efetivamente utilizadas no mês.</p>
         <ul class="itens sep">
           <li>Pacote de Terapia da Comunicação</li>
